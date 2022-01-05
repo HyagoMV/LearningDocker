@@ -9,11 +9,20 @@
 
 # Docker: IMAGE
 - Fonte de somente leitura usada para subir container
-## # Docker: Dockerfile
+- Consiste em camadas de somente leitura
+ - Para cada instrução contida no `Dockerfile` uma camada de somente leitura é criada
+ - Ao criar um container apartir da image um nova camada de leitura e escrita é criada
+
+### Docker: Dockerfile
+- O Docker constrói imagens lendo as instruções de um `Dockerfile`
+ - Um arquivo de texto em um formato específico que contém todos os comandos/instruções, **em ordem**, para construir uma imagem
 - Com o `Dockerfile` é possível criar `Docker Images`
 - FROM...
 - Comando que dever ser executado assim que o container estiver em pé CMD
 - Libera um porta dentro do container : EXPOSE
+#### Referência
+- https://docs.docker.com/engine/reference/builder/
+
 # Docker: Build
 - Controi uma imagem apartir de um `Dockerfile`
 
